@@ -5,14 +5,7 @@ interface IUserProfile {
     name: string
 }
 
-interface ProfileScreenProps {
-    navigation: NavigationScreenProp<any>;
-    userProfile: IUserProfile; 
-}
 
-interface ProfileScreenState {
-    showNameEditModal: boolean;
-}
 
 const LoginScreen: React.FC = ({navigation}) => {
 

@@ -8,19 +8,19 @@ export const ChooseAnswer = (answerIdentificator: string) => {
     
     return async (dispatch: Dispatch<GameActions>, getState: () => ReduxState): Promise<void> => {
         const state = getState();
-        let newStoryPoint = fakeStoryPoints.find(x=>x.identificator === answerIdentificator);
+        let newStoryPoint = fakeStoryPoints.find(x=>x.identification === answerIdentificator);
 
             dispatch({
                 type: GameActionType.ChoosenAnswer,
                 payload:{
                     newStoryPoint: newStoryPoint,
-                    newSpeaker: fakeSpeakers.find(x=>x.identificator == newStoryPoint?.speakerIdentificator)
+                    newSpeaker: fakeSpeakers.find(x=>x.identificator == newStoryPoint?.speakerIdentification)
                 }
             });
-            StartDrawingText();
+            //StartDrawingText();
     }   
 }
-
+/*
 export const StartDrawingText = () => {
     
     return async (dispatch: Dispatch<GameActions>): Promise<void> => {
@@ -28,7 +28,7 @@ export const StartDrawingText = () => {
                 type: GameActionType.StartDrawingText,
             });
     }   
-}
+}*/
 
 export const GoOnPreviousStoryPoint = () => {
     
@@ -37,8 +37,8 @@ export const GoOnPreviousStoryPoint = () => {
 
         state.game.storyTracking.pop();
         let identificatorOfPreviousStoryPoint = state.game.storyTracking[state.game.storyTracking.length-1];
-        let newStoryPoint = fakeStoryPoints.find(x=>x.identificator === identificatorOfPreviousStoryPoint);
-        let newSpeaker = fakeSpeakers.find(x=>x.identificator == newStoryPoint?.speakerIdentificator);
+        let newStoryPoint = fakeStoryPoints.find(x=>x.identification === identificatorOfPreviousStoryPoint);
+        let newSpeaker = fakeSpeakers.find(x=>x.identificator == newStoryPoint?.speakerIdentification);
 
         dispatch({
                 type: GameActionType.GoOnPreviousStoryPoint,
@@ -58,7 +58,7 @@ export const GoOnInitialStoryPoint = () => {
             });
     }   
 }
-
+/*
 export const DrawTextPart = (numberOfCharactersToDraw:number) => {
     
     return async (dispatch: Dispatch<GameActions>, getState: () => ReduxState): Promise<void> => {
@@ -82,13 +82,9 @@ export const DrawTextPart = (numberOfCharactersToDraw:number) => {
                 }
             });
 
-            /*if(!isThereRemainingText){
-                console.log("--FINISH THE WORK--");
-                await FinishDrawingText();
-            }*/
     }   
 
-}
+}*/
 export const DrawRemainingText = () => {
     
     return async (dispatch: Dispatch<GameActions>): Promise<void> => {

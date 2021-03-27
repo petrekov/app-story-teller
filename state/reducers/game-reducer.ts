@@ -5,11 +5,11 @@ import { GameState } from "../types";
 
 const initState : GameState = {
     actualStoryPoint : fakeStoryPoints[1],
-    actualShowenText: "",
+    actualShowedText: "",
     isDrawingText: true,
     remainingText: true,
     actualSpeaker: fakeSpeakers[0],
-    storyTracking: [fakeStoryPoints[1].identificator]
+    storyTracking: [fakeStoryPoints[1].identification]
 }
 
 export default function gameReducer(state: GameState = initState, action: GameActions): GameState{
@@ -20,12 +20,12 @@ export default function gameReducer(state: GameState = initState, action: GameAc
                 throw new Error("Its error state");
             }
 
-            state.storyTracking.push(action.payload.newStoryPoint.identificator);
+            state.storyTracking.push(action.payload.newStoryPoint.identification);
 
             return {
                 ...state,
                 actualStoryPoint : action.payload.newStoryPoint,
-                actualShowenText : "",
+                actualShowedText : "",
                 isDrawingText: true,
                 remainingText: true,
                 actualSpeaker: action.payload.newSpeaker
@@ -34,7 +34,7 @@ export default function gameReducer(state: GameState = initState, action: GameAc
         case GameActionType.StartDrawingText: {            
             return {
                 ...state,
-                actualShowenText : "",
+                actualShowedText : "",
                 isDrawingText : true,
                 remainingText: true
             }
@@ -42,7 +42,7 @@ export default function gameReducer(state: GameState = initState, action: GameAc
         case GameActionType.DrawRemainingText: {            
             return {
                 ...state,
-                actualShowenText : state.actualStoryPoint.text,
+                actualShowedText : state.actualStoryPoint.text,
                 isDrawingText: false,
                 remainingText: false
             }
@@ -50,7 +50,7 @@ export default function gameReducer(state: GameState = initState, action: GameAc
         case GameActionType.DrawTextPart: {            
             return {
                 ...state,
-                actualShowenText : action.payload.actualShowenText,
+                actualShowedText : action.payload.actualShowenText,
                 remainingText: action.payload.remainingText
             }
         }
@@ -68,7 +68,7 @@ export default function gameReducer(state: GameState = initState, action: GameAc
 
             return {
                 ...state,
-                actualShowenText : action.payload.newStoryPoint.text,
+                actualShowedText : action.payload.newStoryPoint.text,
                 actualSpeaker : action.payload.newSpeaker,
                 actualStoryPoint: action.payload.newStoryPoint,
                 remainingText:false,

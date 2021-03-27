@@ -14,7 +14,7 @@ export interface UserState {
 
 export interface GameState {
     actualStoryPoint: StoryPoint,
-    actualShowenText: string,
+    actualShowedText: string,
     isDrawingText: boolean,
     remainingText: boolean,
     actualSpeaker: Speaker,
@@ -29,11 +29,11 @@ export interface StatsState {
 
 // ---------------- GAME STATE -----------------------
 export interface StoryPoint {
-    identificator: string,
+    identification: string,
     text: string,
-    speakerIdentificator: string | undefined,
+    speakerIdentification: string | undefined,
     answers: Answer[] | undefined,
-    continuousStoryPointIdentificator: string | undefined
+    continuousStoryPointIdentification: string | undefined
 }
 
 export interface Speaker {
@@ -45,7 +45,7 @@ export interface Speaker {
 
 export interface Answer {
     text: string,
-    connectedStoryPointIdentificator: string | undefined,
+    connectedStoryPointIdentification: string | undefined,
     relationRequired: number,
 }
 

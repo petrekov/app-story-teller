@@ -5,7 +5,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-import GameScreen from './screens/gameScreen';
+import GameScreen from './screens/GameScreen/GameScreen';
 import { persistor, store } from './state/store';
 
 const Stack = createStackNavigator();

@@ -4,8 +4,17 @@ export class GameSelectors {
     static getActualStoryPoint(state: ReduxState) {
         return state.game.actualStoryPoint;
     }
-    static getActualShowenText(state: ReduxState) {
-        return state.game.actualShowenText;
+    static getActualStoryPointText(state: ReduxState) {
+        return state.game.actualStoryPoint.text;
+    }
+    static getActualStoryPointAnswers(state: ReduxState) {
+        return state.game.actualStoryPoint.answers;
+    }
+    static getActualStoryPointContinuousStoryPointIdent(state: ReduxState) {
+        return state.game.actualStoryPoint.continuousStoryPointIdentification;
+    }
+    static getActualShowedText(state: ReduxState) {
+        return state.game.actualShowedText;
     }
     static getIsDrawingText(state: ReduxState) {
         return state.game.isDrawingText;

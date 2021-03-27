@@ -3,142 +3,142 @@ import { Speakers } from "./constants/speakers";
 
 export const fakeStoryPoints: StoryPoint[] = [
     {
-        identificator: "A000",
+        identification: "A000",
         text: "Continues next time",
         answers: undefined,
-        speakerIdentificator:undefined,
-        continuousStoryPointIdentificator: undefined //Must be manualy settet
+        speakerIdentification:undefined,
+        continuousStoryPointIdentification: undefined //Must be manually settet
     },
     {
-        identificator: "A000",
+        identification: "A000",
         text: "This world is cruel, bloody hole... So can we start your weird story?",
         answers: [
             {
                 relationRequired: 0,
                 text: "Yes please",
-                connectedStoryPointIdentificator: "A001"
+                connectedStoryPointIdentification: "A001"
             },
             {
                 relationRequired: 0,
                 text: "Ohhohoho yea!!",
-                connectedStoryPointIdentificator: "A001"
+                connectedStoryPointIdentification: "A001"
             },
             {
                 relationRequired: 0,
                 text: "Shut up and let me go",
-                connectedStoryPointIdentificator: undefined,             
+                connectedStoryPointIdentification: undefined,             
             },
         ],
-        speakerIdentificator:Speakers.StoryTeller,
-        continuousStoryPointIdentificator: undefined
+        speakerIdentification:Speakers.StoryTeller,
+        continuousStoryPointIdentification: undefined
     },
     {
-        identificator: "A001",
-        text: "It was a long time ago, in a dark times when the wolfes rule the world, our world. Before the humans come into this cured lands. Before the elves rebelion and even before the Age of dragons.",
+        identification: "A001",
+        text: "It was a long time ago, in a dark times when the wolfes rule the world, our world. Before the humans come into this cured lands. Before the elves rebellion and even before the Age of dragons.",
         answers: undefined,
-        speakerIdentificator:Speakers.StoryTeller,
-        continuousStoryPointIdentificator: "A002"
+        speakerIdentification:Speakers.StoryTeller,
+        continuousStoryPointIdentification: "A002"
     },
     {
-        identificator: "A002",
-        text: "In these ancient times there was a one famous, brave and unbelievebily strong wolf. The Alpha was his name! Her claws was sharper than any sword, his teeths were stronger, than any dragon and his desire for blood was bigger than humans desires for power to rule the world.",
+        identification: "A002",
+        text: "In these ancient times there was a one famous, brave and unbelievably strong wolf. The Alpha was his name! Her claws was sharper than any sword, his teethes were stronger, than any dragon and his desire for blood was bigger than humans desires for power to rule the world.",
         answers: undefined,
-        speakerIdentificator:Speakers.StoryTeller,
-        continuousStoryPointIdentificator: "A003"
+        speakerIdentification:Speakers.StoryTeller,
+        continuousStoryPointIdentification: "A003"
     },
     {
-        identificator: "A003",
-        text: "He was absolute rules of the world until his own death. During his live there was noone who can stand agains his will.",
+        identification: "A003",
+        text: "He was absolute rules of the world until his own death. During his live there was no one who can stand against his will.",
         answers: undefined,
-        speakerIdentificator:Speakers.StoryTeller,
-        continuousStoryPointIdentificator: "A004"
+        speakerIdentification:Speakers.StoryTeller,
+        continuousStoryPointIdentification: "A004"
     },
     {
-        identificator: "A004",
+        identification: "A004",
         text: "Now you probably asking why i telling all of that to you and answer is as simple as terrified.",
         answers: undefined,
-        speakerIdentificator:Speakers.StoryTeller,
-        continuousStoryPointIdentificator: "A005"
+        speakerIdentification:Speakers.StoryTeller,
+        continuousStoryPointIdentification: "A005"
     },
     {
-        identificator: "A005",
+        identification: "A005",
         text: "The Alpha is back...",
         answers: undefined,
-        speakerIdentificator:Speakers.StoryTeller,
-        continuousStoryPointIdentificator: "A006"
+        speakerIdentification:Speakers.StoryTeller,
+        continuousStoryPointIdentification: "A006"
     },
     {
-        identificator: "A006",
+        identification: "A006",
         text: "The priests of D`Kheltan found his body, sacrifice many innocent lives and call him back from underworld",
         answers: undefined,
-        speakerIdentificator:Speakers.StoryTeller,
-        continuousStoryPointIdentificator: "A007"
+        speakerIdentification:Speakers.StoryTeller,
+        continuousStoryPointIdentification: "A007"
     },
     {
-        identificator: "A007",
+        identification: "A007",
         text: "Dark times coming. The darkest ancient in our history is before our gates and trying get in. The Alpha is awaken, but it will take some time until he gains back his full power. There is still a hope.",
         answers: undefined,
-        speakerIdentificator:Speakers.StoryTeller,
-        continuousStoryPointIdentificator: "A008"
+        speakerIdentification:Speakers.StoryTeller,
+        continuousStoryPointIdentification: "A008"
     },
     {
-        identificator: "A008",
+        identification: "A008",
         text: "You are the hope...",
-        speakerIdentificator:Speakers.StoryTeller,
+        speakerIdentification:Speakers.StoryTeller,
         answers: undefined,
-        continuousStoryPointIdentificator: "A009"
+        continuousStoryPointIdentification: "A009"
     },
     {
-        identificator: "A009",
+        identification: "A009",
         text: "Uhh that was a weird dream...",
         answers: undefined,
-        speakerIdentificator:Speakers.Hero,
-        continuousStoryPointIdentificator: "A010"
+        speakerIdentification:Speakers.Hero,
+        continuousStoryPointIdentification: "A010"
     },
     {
-        identificator: "A010",
-        text: "*You wake up and look around. Everythink looks as always, but the weird feel is still in your heart. Maybe it was more, than a dream? Maybe that cruel, creepy monster is real? You still see his eyes*",
+        identification: "A010",
+        text: "*You wake up and look around. Everything looks as always, but the weird feel is still in your heart. Maybe it was more, than a dream? Maybe that cruel, creepy monster is real? You still see his eyes*",
         answers: undefined,
-        speakerIdentificator:Speakers.Hero,
-        continuousStoryPointIdentificator: "A011"
+        speakerIdentification:Speakers.Hero,
+        continuousStoryPointIdentification: "A011"
     },
     {
-        identificator: "A011",
+        identification: "A011",
         text: "Shit! My head is really hurts... What now?",
         answers: [
             {
                 text: "*Go outside to find some herbs*",
                 relationRequired: 0,
-                connectedStoryPointIdentificator: undefined
+                connectedStoryPointIdentification: undefined
             },
             {
                 text: "*Focus more on that weird dream*",
                 relationRequired: 0,
-                connectedStoryPointIdentificator: "A012"
+                connectedStoryPointIdentification: "A012"
             }
         ],
-        speakerIdentificator:Speakers.Hero,
-        continuousStoryPointIdentificator: undefined
+        speakerIdentification:Speakers.Hero,
+        continuousStoryPointIdentification: undefined
     },
     {
-        identificator: "A012",
+        identification: "A012",
         text: "*You trying focus as much as you can. You swimming deep into you head and try to wake up lost memories. And then you see it!",
-        speakerIdentificator: Speakers.Hero,
+        speakerIdentification: Speakers.Hero,
         answers: undefined,
-        continuousStoryPointIdentificator: "A013"
+        continuousStoryPointIdentification: "A013"
     },
     {
-        identificator: "A013",
-        text: "*You stand in middle of nothing. Everywhere around you is nothing more than a absolutly empty darkness. Nothing darker than anythink. Ground starts shaking and place before you cracks.",
-        speakerIdentificator: Speakers.Hero,
+        identification: "A013",
+        text: "*You stand in middle of nothing. Everywhere around you is nothing more than a absolutely empty darkness. Nothing darker than anything. Ground starts shaking and place before you cracks.",
+        speakerIdentification: Speakers.Hero,
         answers: undefined,
-        continuousStoryPointIdentificator: "A014"
+        continuousStoryPointIdentification: "A014"
     },
     {
-        identificator: "A014",
+        identification: "A014",
         text: "*Now you are looking into IT`s eyes. They are as deep as deepest ocean and as hungry as most perverse demon. You see nothing than endless suffering and pain*",
-        speakerIdentificator: Speakers.Hero,
+        speakerIdentification: Speakers.Hero,
         answers: undefined,
-        continuousStoryPointIdentificator: undefined,
+        continuousStoryPointIdentification: undefined,
     }
 ]
